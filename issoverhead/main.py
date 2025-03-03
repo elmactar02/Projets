@@ -2,10 +2,10 @@ import requests
 from datetime import datetime
 import smtplib,time
 
-MY_LAT = 51.507351 # Your latitude
-MY_LONG = -0.127758 # Your longitude
-email = "elhadjimouhamadougueye1@gmail.com"
-mdp= "pwwa fgjm welk mtko"
+MY_LAT = 0
+MY_LONG = 0
+email = ""
+mdp= ""
 
 def checkup():
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
@@ -41,7 +41,7 @@ def checkup():
             with smtplib.SMTP("smtp.gmail.com",port=587) as connexion:
                     connexion.starttls()
                     connexion.login(user=email,password=mdp)
-                    connexion.sendmail(from_addr=email,to_addrs="mactargueye2003@gmail.com",
+                    connexion.sendmail(from_addr=email,to_addrs="",
                                 msg="Look Up !")
     else: print("Not for now !")
     time.sleep(60)

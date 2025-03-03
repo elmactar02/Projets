@@ -2,8 +2,8 @@ import random
 import smtplib 
 import datetime as dt
 
-email = "elhadjimouhamadougueye1@gmail.com"
-mdp= "pwwa fgjm welk mtko"
+email = ""
+mdp= ""
 day_of_week_today = dt.datetime.now().weekday()
 list_quotes = []
 try:
@@ -17,6 +17,6 @@ else:
         with smtplib.SMTP("smtp.gmail.com",port=587) as connexion:
             connexion.starttls()
             connexion.login(user=email,password=mdp)
-            connexion.sendmail(from_addr=email,to_addrs="momoletesteur@gmail.com",
+            connexion.sendmail(from_addr=email,to_addrs="",
                             msg=f"Subject:Motivation of the day\n\n {quote_of_day}")
 

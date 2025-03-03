@@ -11,8 +11,8 @@ import datetime as dt
 import random,sys
 import pandas,smtplib
 
-email = "elhadjimouhamadougueye1@gmail.com"
-mdp= "pwwa fgjm welk mtko"
+email = ""
+mdp= ""
 date_today = dt.datetime.now()
 day_today = dt.datetime.now().day
 month_today = dt.datetime.now().month
